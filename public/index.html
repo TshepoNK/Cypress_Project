@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header, .sidebar, .content {
+            padding: 20px;
+        }
+        .header {
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .project-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .project-info h1 {
+            margin: 0 10px 0 0;
+        }
+        .header .icons img {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            background-color: #f0f0f0;
+            width: 200px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sidebar ul li.active {
+            background-color: #ddd;
+        }
+        .content {
+            flex-grow: 1;
+            background-color: #fff;
+        }
+        .plot-list {
+            margin-top: 20px;
+        }
+        .plot {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .plot .controls {
+            margin-top: 10px;
+        }
+        .plot .controls button {
+            margin-right: 10px;
+        }
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress-bar div {
+            height: 10px;
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="project-info">
+            <h1>Hofgut Neuhousen</h1>
+            <span>300.3 ha</span>
+        </div>
+        <div class="icons">
+            <img src="settings-icon.png" alt="Settings" width="20" height="20">
+            <img src="notifications-icon.png" alt="Notifications" width="20" height="20">
+            <img src="user-icon.png" alt="User Profile" width="20" height="20">
+            <button class="send-to-sponsor">Send to sponsor</button>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#plot-list">Plot list</a>
+        <a href="#investments">Investments</a>
+        <a href="#claims">Claims</a>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>Landler</li>
+                <li>Dashboard</li>
+                <li class="active">Project</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="plot-list">
+                <div class="plot">
+                    <h2>Auerland</h2>
+                    <span>1222.74 ha</span>
+                    <div class="controls">
+                        <button>Edit details</button>
+                        <button>Add Crops</button>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="plot">
+                    <h2>Waldeck 1</h2>
+                    <span>2178.00 ha</span>
+                    <div class="controls">
+                        <button>Edit details</button>
+                        <button>Add Crops</button>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="plot">
+                    <h2>Waldeck 2</h2>
+                    <span>0.01 ha</span>
+                    <div class="controls">
+                        <button>Edit details</button>
+                        <button>Add Crops</button>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 20%;"></div>
+                    </div>
+                </div>
+                <button class="add-new-data">Add New Data</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
